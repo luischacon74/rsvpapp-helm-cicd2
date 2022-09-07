@@ -24,9 +24,4 @@ spec:
               cpu: "200m"
           ports:
             - containerPort: 8080
-if !watchSync && !watchHealth && !watchOperations && !watchSuspended { 
- 	watchSync = true 
- 	watchHealth = true 
- 	watchOperations = true 
- 	watchSuspended = false 
- } 
+
