@@ -6,3 +6,6 @@ resources:
 images:
 - name: ghcr.io/luischacon74/rsvpapp-helm-cicd2/nginx
   newTag: "31"
+configMapGenerator:
+- envs:
+  - variables.properties
