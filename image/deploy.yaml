@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: ghcr.io/diegocarlo0526/testargocd/nginx:latest
+          image: ghcr.io/luischacon74/rsvpapp-helm-cicd2/nginx
           resources:
             requests:
               memory: "128Mi"
