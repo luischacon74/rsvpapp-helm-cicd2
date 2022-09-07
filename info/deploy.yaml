@@ -24,4 +24,24 @@ spec:
               cpu: "200m"
           ports:
             - containerPort: 8080
+            livenessProbe:
+              failureThreshold: 3
+              httpGet:
+                path: /live
+                port: 9000
+                scheme: HTTP
+              initialDelaySeconds: 30
+              periodSeconds: 5
+              successThreshold: 1
+              timeoutSeconds: 5
+            readinessProbe:
+              failureThreshold: 3
+              httpGet:
+                path: /ready
+                port: 9000
+                scheme: HTTP
+             initialDelaySeconds: 30
+             periodSeconds: 5
+             successThreshold: 1
+             timeoutSeconds: 5
 
